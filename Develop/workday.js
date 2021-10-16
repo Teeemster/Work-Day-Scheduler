@@ -14,7 +14,7 @@ for (let i = 0; i < 24; i++) {
 
     <section class="hour col-1" id="timeSlotArea">${i + 1}:00 PST</section>
 
-    <section class="row col-8 past"><input type="text" class="past border-0 col-12" id="calendarInfo${i + 1}""></section>
+    <section class="row col-8 past"><textarea class="past border-0 col-12" id="calendarInfo${i + 1}"></textarea></section>
 
     <section class="d-flex col-1 justify-content-center saveBtn"><button type="button" class="fa align-self-center lockButtons"
           id="lockButton">&#xf023;</button></section>
@@ -62,3 +62,5 @@ var activitiesArray = JSON.parse(localStorage.getItem('Activities')) || [];
 for (let i = 0; i < activitiesArray.length; i++) {
  calendarInfo1.textContent = activitiesArray
 }
+
+console.log(calendarInfo1.textContent)
