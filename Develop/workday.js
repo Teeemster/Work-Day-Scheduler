@@ -16,7 +16,7 @@ for (let i = 0; i < 24; i++) {
 
     <section class="row col-8 past"><input type="text" class="past border-0 col-12" id="calendarInfo${i + 1}""></section>
 
-    <section class="d-flex col-1 justify-content-center saveBtn"><button type="button" class="fa align-self-center"
+    <section class="d-flex col-1 justify-content-center saveBtn"><button type="button" class="fa align-self-center lockButtons"
           id="lockButton">&#xf023;</button></section>
 
           </div>
@@ -52,7 +52,7 @@ var calendarInfo23 = $("#calendarInfo23")
 var calendarInfo24 = $("#calendarInfo24")
 
 //Saving Storage Upon Clicking
-$("#lockButton").on("click", function () {
+$(".lockButtons").on("click", function () {
 localStorage.setItem('Activities', JSON.stringify(allStorage));
 }
 );
